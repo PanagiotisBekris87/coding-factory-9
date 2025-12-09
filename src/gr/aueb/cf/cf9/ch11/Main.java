@@ -7,8 +7,8 @@ public class Main {
         Student alice = new Student();
         Student bob = new Student();
 
-//        alice.id = 1;
-//        bob.id = 2;
+//        alice.id = 1;                         // αντικαθίστανται από setters όταν κάνουμε τις μεταβλητές
+//        bob.id = 2;                           // private (encapsulation)
 //        student.firstname = "George";
 
         User andreas = new User(1, "Andreas", "Andreou", "andrew22", "12345", true);
