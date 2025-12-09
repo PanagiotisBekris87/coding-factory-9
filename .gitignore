@@ -1,0 +1,10 @@
+### IntelliJ IDEA ###
+out/
+
+.kotlin
+
+CodingFactory9.iml
+**/*.jpg
+**/*.txt
+
+.idea/
