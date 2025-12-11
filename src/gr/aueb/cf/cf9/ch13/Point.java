@@ -7,11 +7,11 @@ public class Point {
     private int x;
     private int y;
 
-    public Point() {
+    private Point() {
 
     }
 
-    public Point(int x, int y) {
+    private Point(int x, int y) {
         this.x = x;
         this.y = y;
     }
@@ -28,7 +28,7 @@ public class Point {
         final int BOUND = 101;                              // το BOUND το χρειαζόμαστε για να το βάλουμε μέσα στο random. Θα είναι exclusive οπότε θα δώσει μέχρι 100.
         Random random = new Random(System.nanoTime());
 
-        // (max - min + 1) + 1
+        // (max - min + 1) + min
         return new Point(random.nextInt(BOUND - 1 + 1) + 1, random.nextInt(BOUND - 1 + 1) + 1);
     }
 }
