@@ -11,4 +11,5 @@ public interface ISpeakable {
      */
     public abstract void speak();       // Όπως βλέπουμε το public abstract είναι γκρι
                                         // Οπότε και να μην το γράψουμε δίνεται by default
+                                        // Υπονοείται αυτόματα και δεν το γράφουμε
 }

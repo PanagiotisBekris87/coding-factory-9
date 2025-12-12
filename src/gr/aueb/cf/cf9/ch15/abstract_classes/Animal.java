@@ -18,7 +18,7 @@ public abstract class Animal {
         this.id = id;
         this.name = name;
     }
-
+    
     public long getId() {
         return id;
     }

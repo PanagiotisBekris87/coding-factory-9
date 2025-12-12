@@ -9,11 +9,9 @@ public class Main {
 
         deliver(book);
         deliver(cd);
-        deliver(product);       // compile-time safety
-                                // Με προστατεύει η το marker Interface
-
-
-
+        //deliver(product);       // compile-time safety
+                                // Με προστατεύει το marker Interface
+                                // Αν το βγάλουμε από τα σχόλια δεν το τρέχει ο compiler
     }
 
     public static void deliver(Item item) {
