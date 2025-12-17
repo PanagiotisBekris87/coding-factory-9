@@ -9,13 +9,13 @@ public class Main {
         Printable printable = new Printable() {
             @Override
             public void print() {
-                System.out.println("Hello World!");
+                System.out.println("Hello World! Legacy , anonymous class");
             }
         };
 
 
         // Lambda που υλοποιεί την print από το interface. - Lambda expression
-        Printable printable2 = () -> System.out.println("Hello World!");
+        Printable printable2 = () -> System.out.println("Hello World! Lambda");
         Printable printable3 = () -> doPrint();
 
         // Method reference
@@ -32,13 +32,13 @@ public class Main {
         doWithPrintable(new Printable() {
             @Override
             public void print() {
-                System.out.println("Hello World!");
+                System.out.println("Hello World! anonymous in dowithprintable");
             }
         });
 
         System.out.println("------------------------- LAMBDA EXPRESSIONS");
 
-        doWithPrintable(() -> System.out.println("Hello World!"));
+        doWithPrintable(() -> System.out.println("Hello World! lambda in dowithprintable"));
 
         System.out.println("------------------------- METHOD REFERENCES");
 
@@ -48,7 +48,7 @@ public class Main {
     }
 
     public static void doPrint() {
-        System.out.println("Hello World!");
+        System.out.println("Hello World! method reference!");
     }
 
     public static void doWithPrintable(Printable printable) {
