@@ -33,6 +33,12 @@ public class Student {
     }
 
     public void setCity(City city) {
+//        this.city = city;
         this.city = new City(city);
+    }
+
+    @Override
+    public String toString() {
+        return name + " " + city.getDescription();
     }
 }
