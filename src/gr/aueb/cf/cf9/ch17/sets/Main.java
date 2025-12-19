@@ -16,6 +16,7 @@ public class Main {
                                 // Δεν ρίχνει exception απλά δεν το κάνει
 
         // Δεν υπάρχει update - απλά remove και add
+        // Time complexity Ο(1) στην contains
         if (!bag.contains("apple")) {           // override equals
             bag.remove("apple");
         } else {
