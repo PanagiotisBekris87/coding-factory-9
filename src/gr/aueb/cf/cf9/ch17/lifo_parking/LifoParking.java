@@ -21,12 +21,12 @@ public class LifoParking {
     // Delegation - δεν υλοποιώ εγώ την add. Καλώ υπηρεσία της linked List
     public void addCar (String car) {
         parking.push(car);      // πάντα στο top προσθέτει
-        System.out.println(LocalDateTime.now() + ": " + ", Είσοδος, Αρ. Πινακίδας=" + car);
+        System.out.println(LocalDateTime.now() + ": " + ", Είσοδος, Αρ. Πινακίδας = " + car);
     }
 
     public String removeCar() {
         String car = parking.pop();
-        System.out.println(LocalDateTime.now() + ": " + ", Έξοδος, Αρ. Πινακίδας=" + car);
+        System.out.println(LocalDateTime.now() + ": " + ", Έξοδος, Αρ. Πινακίδας = " + car);
         return car;
     }
 
