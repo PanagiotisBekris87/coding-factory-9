@@ -24,5 +24,7 @@ public class Main {
 
         // traverse με method reference
         bag.forEach(System.out::println);
+
+        bag.removeIf(item -> item.startsWith("b"));
     }
 }
