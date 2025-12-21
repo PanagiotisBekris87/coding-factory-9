@@ -66,9 +66,9 @@ public class SingleList<T> {
     public Node<T> get(T t) {
         Node<T> nodeToReturn = null;
 
-        for (Node<T> n = head; n.getNext() != null; n.getNext()) {
+        for (Node<T> n = head; n != null; n = n.getNext()) {
 
-            if (n.getNext().equals(t)) {
+            if (n.getItem().equals(t)) {
                 nodeToReturn = n;
                 break;
             }
