@@ -38,7 +38,8 @@ public class GenericMethods {
     }
 
 
-
+    // Μνημονικός κανόνας PECS
+    // Producer extends , consumer super
     private static <T> void produceConsume(List<? super T> list, Iterable<? extends T> src) {
         for (T item : src) {
             list.add(item);
