@@ -56,22 +56,6 @@ public class DoublyLinkedList<T> {
         return nodeToReturn;
     }
 
-
-//    public Node<T> removeFirstAlternative() {
-//        if (isEmpty()) return null;
-//
-//        Node<T> nodeToReturn = head;
-//
-//        if (head == tail) {
-//            head = null;        // Η λίστα είναι πλέον άδεια
-//            tail = null;
-//        } else {
-//            head = head.getNext();
-//            head.setPrev(null);
-//        }
-//        return nodeToReturn;
-//    }
-
     /**
      * Time complexity O(1)
      * @param t
