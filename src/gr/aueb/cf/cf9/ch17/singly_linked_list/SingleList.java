@@ -78,14 +78,14 @@ public class SingleList<T> {
 
     // traverse της λίστας
     public void traverse() {
-        for (Node<T> n = head; n.getNext() != null; n.getNext()) {
+        for (Node<T> n = head; n != null; n = n.getNext()) {
             System.out.println(n.getItem());
         }
     }
 
     public int size() {
         int counter = 0;
-        for (Node<T> n = head; n.getNext() != null; n.getNext()) {
+        for (Node<T> n = head; n != null; n = n.getNext()) {
             counter++;
         }
         return counter;
