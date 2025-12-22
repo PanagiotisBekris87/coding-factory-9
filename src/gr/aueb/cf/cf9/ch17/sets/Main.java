@@ -9,10 +9,10 @@ public class Main {
 
         Set<String> bag = new HashSet<>();
 
-        bag.add("aplle");
+        bag.add("apple");
         bag.add("banana");
         bag.add("orange");
-        bag.add("aplle");       // No duplicates allowed
+        bag.add("apple");       // No duplicates allowed
                                 // Δεν ρίχνει exception απλά δεν το κάνει
 
         // Δεν υπάρχει update - απλά remove και add
