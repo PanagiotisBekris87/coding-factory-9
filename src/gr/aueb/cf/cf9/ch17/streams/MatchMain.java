@@ -1,0 +1,32 @@
+package gr.aueb.cf.cf9.ch17.streams;
+
+import java.util.List;
+
+public class MatchMain {
+
+    public static void main(String[] args) {
+
+        List<String> names = List.of("Alice", "Bob", "Costas");
+
+        boolean isAliceExists = names.stream()
+                .anyMatch(name -> name.equals("Alice"));
+        System.out.println("isAliceExists = " + isAliceExists);
+
+
+        boolean allAreAlice = names.stream()
+                .allMatch(name -> name.equals("Alice"));
+        System.out.println("allAreAlice = " + allAreAlice);
+
+
+        boolean noneIsAlice = names.stream().
+                noneMatch(name -> name.equals("Alice"));
+        System.out.println("noneIsAlice = " + noneIsAlice);
+
+
+        List<Integer> numbers = List.of(2, 4, 6, 8);
+
+        boolean areAllEven = numbers.stream()
+                .allMatch(num -> num % 2 == 0);
+        System.out.println("isAllEven = " + areAllEven);
+    }
+}
