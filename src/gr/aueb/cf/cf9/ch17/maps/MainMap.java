@@ -25,6 +25,9 @@ public class MainMap {
         String country = countries.get("GR");
         System.out.println("country = " + country);
 
+        // Remove
+        countries.remove("USA");
+
 
         // Traverse
         countries.forEach((key, value) -> System.out.println(key + ", " + value));

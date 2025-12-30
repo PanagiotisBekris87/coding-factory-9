@@ -7,6 +7,7 @@ public class Main {
         UserRole role = UserRole.ADMIN;
 
         String roleAdmin = role.name();        // παρόμοιο με την toString
+                                               // επιστρέφει το ADMIN σαν String
         System.out.println("role = " + roleAdmin + ", ordinal: " + role.ordinal());
 
         UserRole roleUser = UserRole.valueOf(roleAdmin);    // typecast
