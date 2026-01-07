@@ -21,4 +21,6 @@ public interface IAccountDAO {
     // νέα απαίτηση
 
     boolean isAccountExists(String iban);
+
+    long count();
 }
