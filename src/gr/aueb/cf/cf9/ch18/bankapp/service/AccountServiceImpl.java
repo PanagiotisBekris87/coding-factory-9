@@ -15,6 +15,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 
+
 public class AccountServiceImpl implements IAccountService {
 
     private final IAccountDAO accountDAO;
@@ -63,11 +64,11 @@ public class AccountServiceImpl implements IAccountService {
             // Logging και στο καλό σενάριο
         } catch (AccountNotFoundException e) {
             // Logging
-            System.err.printf("%s. The account with iban=%s was not found!\n", LocalDateTime.now(), withdrawDTO.iban());
+            System.err.printf("%s. The account with iban = %s was not found!\n", LocalDateTime.now(), withdrawDTO.iban());
             throw e;
         } catch (InsufficientBalanceException e) {
             // Logging
-            System.err.printf("%s. The amount=%f is greater then the balance of the account with iban=%s. \n",
+            System.err.printf("%s. The amount = %f is greater than the balance of the account with iban = %s. \n",
                     LocalDateTime.now(), withdrawDTO.amount(), withdrawDTO.iban());
             throw e;
         }
@@ -79,8 +80,9 @@ public class AccountServiceImpl implements IAccountService {
             Account account = accountDAO.findByIban(iban)
                     .orElseThrow(() -> new AccountNotFoundException("Account with iban " + iban + " not found"));
             return account.getBalance();
+            // Ενδεχομένως logging και στην ερώτηση υπολοίπου
         } catch (AccountNotFoundException e) {
-            System.err.printf("%s. The account with iban=%s was not found!\n", LocalDateTime.now(), iban);
+            System.err.printf("%s. The account with iban = %s was not found!\n", LocalDateTime.now(), iban);
             throw e;
         }
     }
@@ -89,6 +91,7 @@ public class AccountServiceImpl implements IAccountService {
     public List<AccountReadOnlyDTO> getAllAccounts() {
         return accountDAO.getAllAccounts().stream()
                 .map(Mapper::mapToReadOnlyDTO)
-                .toList();
+//                .collect(Collectors.toList())
+                .toList();                          // Unmodifiable Copy του List
     }
 }
