@@ -7,7 +7,7 @@ public class LowerCaseAssert {
 
     public static void main(String[] args) {
 
-        String s = "ASDADSADSDa";      // τουλάχιστον 8 χαρακτήρες, τουλάχιστον 1 lower case
+        String s = "ASDADSADSaD";      // τουλάχιστον 8 χαρακτήρες, τουλάχιστον 1 lower case
 
         Pattern pattern = Pattern.compile("(?=.*?[a-z])^.{8,}$");      // zero-length assertion;
         // to ^ σημαίνει αρχή String και το $ τέλος String
