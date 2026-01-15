@@ -14,7 +14,8 @@ public class NonCapturing {
 
         String s = "HelloWorld HelloWorld";
 
-        Pattern pattern = Pattern.compile("(Hello)(?:World)");
+        Pattern pattern = Pattern.compile("(Hello)(?:World)");      // Το ?: δεν το τοποθετεί μέσα στα groups του matcher
+
         Matcher matcher = pattern.matcher(s);
 
         while (matcher.find()) {
