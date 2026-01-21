@@ -15,8 +15,8 @@ public class Student {
 
     public Student(Student student) {
         this.name = student.name;
-        this.city = student.city;                     // shallow copy
-//        this.city = new City(student.getCity());        //deep copy
+//        this.city = student.city;                     // shallow copy
+        this.city = new City(student.getCity());        //deep copy
     }
 
     public String getName() {
@@ -28,13 +28,13 @@ public class Student {
     }
 
     public City getCity() {
-        return city;        // Shallow copy
-//        return new City(this.city);
+//        return city;        // Shallow copy
+        return new City(this.city);
     }
 
     public void setCity(City city) {
-        this.city = city;
-//        this.city = new City(city);
+//        this.city = city;
+        this.city = new City(city);
     }
 
 
